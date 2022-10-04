@@ -1,9 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: -apple-system,'Noto Serif Devanagari', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.journal-bg {
+  position: relative;
+}
+
+.journal-bg:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url("manuscript.jpeg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 a {
@@ -13,14 +36,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
